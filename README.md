@@ -6,6 +6,7 @@
 
 ### Quickstart
 安装依赖：`cd Express_Gulp && npm install`
+安装项目js依赖包  `bower install`
 
 #### 使用
 `npm run dev` 开发模式，具备热更新，边修改浏览器边刷新，`dev` 端口 `7000`，配置项端口为 `3001`  

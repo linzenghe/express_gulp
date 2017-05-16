@@ -20,6 +20,7 @@ var concat = require('gulp-concat');
 
 var jshint = require('gulp-jshint');
 
+var cssnano = require('gulp-cssnano');
 
 var cssBase64 = require('gulp-base64');
 var del = require('del');
@@ -48,6 +49,12 @@ gulp.task('less', function () {
       .pipe(gulp.dest('dist/css/'));
 });
 
+//压缩css
+/*gulp.task('css', function() {
+    return gulp.src('public/css/!**!/!*.css')
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist/css/'));
+});*/
 
 // 压缩js
 gulp.task('js', function () {
