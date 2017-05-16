@@ -1,7 +1,8 @@
 
 ### 目的
 `Express`+`Ejs`+`Less`开发，进行`压缩`并`同步`到浏览器端。
-
+`bower`管理js包
+`requirejs` js模块化编程
 
 ### Quickstart
 安装依赖：`cd Express_Gulp && npm install`
@@ -13,5 +14,3 @@
 
 然后先在根目录下执行安装：
 `npm install`，使用时先运行`gulp build`将文件压缩、打包、编译，然后再执行`gulp`开启自动更新服务器。
-
-![](./dist/img/3.png)
