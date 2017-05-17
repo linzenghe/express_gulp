@@ -7,7 +7,35 @@
     <script src="lib/requirejs/require.js" defer async="true" data-main="js/main"></script>
   </head>
   <body>
-    <h1>AA</h1>
-    <p>Hello Welcome to23WEW12</p>
+      <div class="m-login-panel">
+        <div class="m-login-h text-center">
+          <h2>CorePay 商户管理平台</h2>
+        </div>
+        <div class="m-login-b">
+          <form method="post">
+            <div class="f-item clearfix">
+              <label class="pull-left">账&nbsp;&nbsp;&nbsp;号：</label>
+              <input name="user_name" class="f-input pull-left" type="text" placeholder="请输入用户名"/>
+            </div>
+            <div class="f-item clearfix">
+              <label class="pull-left">密&nbsp;&nbsp;&nbsp;码：</label>
+              <input name="password" class="f-input pull-left" type="password" placeholder="请输入密码"/>
+            </div>
+            <div class="f-item clearfix f-item-verCode">
+              <label class="pull-left">验证码：</label>
+              <input name="captcha" class="f-input pull-left" type="text" placeholder="请输入验证码"/>
+              <div class="f-verCode pull-left">
+                <img src="../img/vercode.png">
+              </div>
+              <span class="f-verCode-tip text-primary">看不清楚，换一张图</span>
+            </div>
+            <span class="text-danger error-tip">密码错误</span>
+            <div class="f-submit">
+              <input type="submit" class="btn btn-primary" value="登录">
+            </div>
+          </form>
+
+        </div>
+      </div>
   </body>
 </html>

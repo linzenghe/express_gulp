@@ -2,7 +2,9 @@
 @import "variables.less";
 @import "mixins.less";
 
-
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,label,p{ margin:0; padding:0;}
+body{background: @color-bg;font-size: @font-size-base;font-family: @font-family;min-width: @g-body-w}
+ul,li{list-style: none;}
 
 /*基础 type*/
 @import "type.less";
@@ -20,3 +22,64 @@
 @import "modal.less";
 /*面板 panel*/
 @import "panel.less";
+
+.m-login-panel{
+  position: fixed;
+  top:25%;
+  left: 50%;
+  background: @color-white;
+  width: @g-login-w;
+  margin-left: -(ceil(@g-login-w/2));
+  border-radius: 8px;
+  overflow: hidden;
+  >.m-login-h{
+    height: 80px;
+    background: @color-primary;
+    color: @color-white;
+    >h2{
+      line-height: 80px;
+      font-weight: normal;
+    }
+  }
+  >.m-login-b{
+    padding: @padding-base*2 @padding-base*4;
+    .f-item{
+      >label{
+        font-size: 16px;
+        word-spacing: 1px;
+      }
+      >.f-input{
+        width: 240px;
+        box-sizing: border-box;
+        margin-left: @margin-base;
+      }
+      &.f-item-verCode{
+        >.f-input{
+          width: 130px;
+        }
+        >.f-verCode{
+          width: 90px;
+          height: 32px;
+          margin-left: 20px;
+          >img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        >.f-verCode-tip{
+          position: absolute;
+          bottom: -20px;
+          right: 0;
+          font-size: 12px;
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

@@ -45,26 +45,12 @@ gulp.task('less', function () {
           paths: [ path.join(__dirname, 'less', 'includes') ]
       }))
       .pipe(cssBase64())
-      .pipe(minify())
+      // .pipe(minify())
       .pipe(gulp.dest('dist/css/'));
 });
 
-// 编译less
-gulp.task('css', function () {
-    return gulp.src('public/less/corepay.less')
-        .pipe(less({
-            paths: [ path.join(__dirname, 'less', 'includes') ]
-        }))
-        .pipe(cssBase64())
-        .pipe(gulp.dest('public/less/'));
-});
 
-//压缩css
-/*gulp.task('css', function() {
-    return gulp.src('public/css/!**!/!*.css')
-        .pipe(cssnano())
-        .pipe(gulp.dest('dist/css/'));
-});*/
+
 
 // 压缩js
 gulp.task('js', function () {
@@ -113,7 +99,7 @@ gulp.task('nodemon', function (cb) {
   });
 }); 
 
-gulp.task('build',['clean','less','ejs','js','img','css'],function () {
+gulp.task('build',['clean','less','ejs','js','img'],function () {
     
 });
 
@@ -121,7 +107,7 @@ gulp.task('default',['browser-sync'],function(){
   // 将你的默认的任务代码放这
 
     // 监听所有css文档
-    gulp.watch('public/less/*.less', ['less','css']);
+    gulp.watch('public/less/*.less', ['less']);
 
     // 监听所有.js档
     gulp.watch('public/js/*.js', ['js']);
