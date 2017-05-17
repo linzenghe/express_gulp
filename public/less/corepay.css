@@ -1,0 +1,28 @@
+/*变量与mixin*/
+/*颜色 color*/
+/*基础尺寸*/
+/*common-css*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eaeaea;
+  min-width: 1200px !important;
+}
