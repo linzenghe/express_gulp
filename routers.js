@@ -9,4 +9,7 @@ router.get('/', function(req, res, next) {
     res.render('login');
 });
 
+router.get('/partner/desktop',function (req,res,next) {
+    res.render('desktop')
+})
 module.exports = router;

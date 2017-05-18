@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>corePay</title>
+    <link rel="stylesheet" href="/css/corepay.css"/>
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body class="z-h">
+  <section>
+    <div class="g-menu">
+      <!--展开状态的LOGO-->
+      <div class="logo text-center">
+        <a href="/"><img src="/img/logo.png"></a>
+      </div>
+      <!--收缩状态的LOGO-->
+      <div class="logo-icon text-center">
+        <a href="/"><img src="/img/logo_icon.png"></a>
+      </div>
+      <div class="menu">
+        <ul class="list">
+          <li>
+            <a class="head"><i class="fa fa-desktop navIco"></i><span>商户首页</span></a>
+          </li>
+          <li>
+            <a class="head"><i class="fa fa-shopping-cart navIco"></i><span>交易管理</span><i class="z-switch"></i></a>
+            <ul class="sub">
+              <li><a href=""><i class="u-dot"></i>订单列表</a></li>
+              <li><a href=""><i class="u-dot"></i>提款列表</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="g-main">
+      <div class="top clearfix">
+        <div class="z-flex pull-left"><span></span></div>
+        <ul class="list pull-right">
+          <li class="pull-left"><i class="fa fa-envelope fa-gittip"></i>上次登录时间:<span class="text-danger">2012-12-12 15:30:30</span> 上次登录IP:127.1.1.1</li>
+          <li class="pull-left">余额：<span id="lblAmount" class="text-danger">0.00</span>元 <a class="f-refresh"  href="javascript:void (0)"><i class="fa fa-refresh"></i></a></li>
+          <li class="pull-left f-user">
+            <a><i class="fa fa-user"></i>欢迎你，test2012</a>
+          </li>
+          <li class="pull-left f-pas">
+            <a href="/partner/password"><i class="fa fa-unlock-alt"></i>修改密码</a>
+          </li>
+          <li class="pull-left f-exit">
+            <a href="/logout"><i class="fa fa-power-off"></i>退出</a>
+          </li>
+        </ul>
+      </div>
+      <div class="body">
