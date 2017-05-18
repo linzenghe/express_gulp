@@ -31,10 +31,10 @@ gulp.task('clean', function(cb) {
     del(['dist/css/*', 'dist/js/*', 'dist/img/*','dist/views/*'], cb)
 });
 
-// 压缩ejs
+// 复制ejs
 gulp.task('ejs', function() {
   return gulp.src('views/**/*.ejs')
-      .pipe(htmlmin({collapseWhitespace: true}))
+      // .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist/views/'));
 });
 
