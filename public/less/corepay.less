@@ -101,7 +101,7 @@ ul,li{list-style: none;}
   z-index: 100;
   padding-top: 50px;
   >.logo{
-    .fixed(0,atuo,auto,0);
+    .fixed(0,auto,auto,0);
     width: @g-menu-w;
     height: @g-topNav-h;
     background: @color-primary;
@@ -111,7 +111,7 @@ ul,li{list-style: none;}
     }
     &-icon{
       display: none;
-      .fixed(0,atuo,auto,0);
+      .fixed(0,auto,auto,0);
       background:@color-primary;
     }
   }
@@ -221,6 +221,92 @@ ul,li{list-style: none;}
         }
       }
 
+    }
+  }
+  .body{
+    padding: @padding-base*2;
+    .m-panel-b{
+      >.user{
+        font-weight: normal;
+        font-size: 18px;
+        padding-left: @padding-base;
+        color: @color-9;
+        line-height: 24px;
+        >.dot{
+          margin: 0 @margin-base;
+        }
+      }
+      >.info{
+        padding: @padding-base*2 @padding-base;
+        >li{
+          line-height: 30px;
+          color: @color-9;
+          >label{
+            display: inline-block;
+            width: 60px;
+          }
+        }
+      }
+      >.api{
+        padding: @padding-base;
+        background: @color-info;
+        color: @color-9;
+        >label{
+          width: 60px;
+          line-height: 48px;
+          display: inline-block;
+          font-weight: 700;
+        }
+        >textarea{
+          width: 40%;
+          border:0;
+          font-size: 14px;
+          margin-bottom: -20px;
+          padding: @padding-base/2;
+          font-family: @font-family;
+          resize: none;
+          max-height: 48px;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+        >button{
+          margin-left: @margin-base;
+        }
+      }
+      >.acc{
+        >label{
+          display: block;
+          color:@color-9;
+        }
+        >.sum{
+          font-size:26px;
+          >.u-unit{
+            font-size:16px;
+            color:@color-9;
+            margin-left: @margin-base;
+          }
+        }
+        >.drawBtn{
+          margin: 3px 0 3px 10%;
+        }
+      }
+      >.rate-t{
+        padding:8px 0;
+        border-bottom: 1px solid @color-bor;
+        >h5{
+          line-height: 32px;
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+      >.rate-b{
+        margin-top: @margin-base*2;
+      }
+      .z-wait-open{
+        color: bisque;
+        margin-top: @margin-base*3;
+        font-weight: normal;
+      }
     }
   }
 }
