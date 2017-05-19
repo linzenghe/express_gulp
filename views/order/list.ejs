@@ -1,0 +1,136 @@
+<%include ../header.ejs %>
+    <div class="m-panel">
+        <div class="m-panel-h">
+            <div class="m-panel-t">订单查询</div>
+        </div>
+        <div class="m-panel-b">
+            <form action="" method="post" class="form">
+                <div class="row">
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">平台单号：</label>
+                            <input class="f-input" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">商户单号：</label>
+                            <input class="f-input" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">订单状态：</label>
+                            <select class="f-select">
+                                <option>所有</option>
+                                <option>异常</option>
+                                <option>已完成</option>
+                                <option>处理中</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">支付类型：</label>
+                            <select class="f-select">
+                                <option>所有</option>
+                                <option>微信</option>
+                                <option>支付宝</option>
+                                <option>网上银行</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">提供商：</label>
+                            <select class="f-select">
+                                <option>所有</option>
+                                <option>提供商一</option>
+                                <option>提供商二</option>
+                                <option>提供商三</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">下单时间：</label>
+                            <input class="f-input" type="text" value="">
+                        </div>
+                        <div class="f-item">
+                            <label class="text-right">至：</label>
+                            <input class="f-input" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <label class="text-right">完成时间：</label>
+                            <input class="f-input" type="text" value="">
+                        </div>
+                        <div class="f-item">
+                            <label class="text-right">至：</label>
+                            <input class="f-input" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="g-col-4">
+                        <div class="f-item">
+                            <div class="f-submit">
+                                <button class="btn btn-primary">查询</button>
+                                <button class="btn btn-default">清空</button>
+                                <button class="btn btn-danger">导出</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="scroll">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>详情</th>
+                            <th>平台单号</th>
+                            <th>商户单号</th>
+                            <th>支付类型</th>
+                            <th>提供商</th>
+                            <th>支付状态</th>
+                            <th>订单金额</th>
+                            <th>手续费</th>
+                            <th>实收金额</th>
+                            <th>下单时间</th>
+                            <th>完成时间</th>
+                            <th>订单状态</th>
+                            <th>备注</th>
+                            <th>通知时间</th>
+                            <th>通知状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a>查看</a>
+                            </td>
+                            <td>502746630535290972042</td>
+                            <td>502743904950722582042</td>
+                            <td>微信</td>
+                            <td>腾讯</td>
+                            <td>未支付</td>
+                            <td>0.01</td>
+                            <td>0</td>
+                            <td>0.01</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="15">没有查找到数据</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<%include ../footer.ejs %>

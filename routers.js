@@ -11,5 +11,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/partner/desktop',function (req,res,next) {
     res.render('desktop')
-})
+});
+
+router.get('/order/list',function (req,res,next) {
+    res.render('order/list')
+});
 module.exports = router;
