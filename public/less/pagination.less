@@ -1,0 +1,36 @@
+nav{padding: @padding-base*2 0}
+.pagination{
+  display: inline-block;
+  padding-left: 0;
+  margin: 0;
+  >li{
+    display: inline;
+    &:first-child>a{
+      margin-left: 0;
+      border-top-left-radius: @page-radius;
+      border-bottom-left-radius:@page-radius;
+    }
+    >a{
+      position: relative;
+      float: left;
+      padding: 6px 12px;
+      margin-left:-1px;
+      color: @color-primary;
+      text-decoration: none;
+      background-color: @color-white;
+      .border(1px,solid,@color-bor);
+    }
+    &.active>a{
+      z-index: 2;
+      color: @color-white;
+      cursor: default;
+      background-color: @color-primary;
+      border-color: @color-primary;
+    }
+  }
+  &+span{
+    line-height: 35px;
+    margin-right: @margin-base*3;
+    color: @color-9;
+  }
+}

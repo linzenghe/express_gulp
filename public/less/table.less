@@ -1,3 +1,4 @@
+.table-scroll{margin-top: @margin-base*3;overflow-x: auto}
 .table{
   width: 100%;
   max-width: 100%;
@@ -11,6 +12,8 @@
     border: 1px solid #ddd;
     color: @color-9;
     font-weight: normal;
+    word-break: keep-all;
+    white-space: nowrap;
   }
   >tbody>tr>td{
     text-align: center;
@@ -19,5 +22,7 @@
     padding: @padding-base;
     border: 1px solid #ddd;
     color: @color-3;
+    word-break: keep-all;
+    white-space: nowrap;
   }
 }
