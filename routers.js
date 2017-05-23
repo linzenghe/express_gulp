@@ -16,4 +16,8 @@ router.get('/partner/desktop',function (req,res,next) {
 router.get('/order/list',function (req,res,next) {
     res.render('order/list')
 });
+
+router.get('/withdraw/list',function (req,res,next) {
+    res.render('withdraw/list')
+});
 module.exports = router;
