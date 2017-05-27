@@ -19,6 +19,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "requirejs": "^2.3.3",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery-validation": "jquery.validate#^1.13.0"
   }
 }

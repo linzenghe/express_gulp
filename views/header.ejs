@@ -8,28 +8,30 @@
     <link rel="stylesheet" href="/css/corepay.css"/>
     <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
     <script type="text/javascript" src="/lib/requirejs/require.js"></script>
+    <script type="text/javascript" src="/js/require-config.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
   </head>
-  <body class="z-h">
+  <body class="s-left-side">
   <section>
     <div class="g-menu">
       <!--展开状态的LOGO-->
       <div class="logo text-center">
-        <a href="/"><img src="/img/logo.png"></a>
+        <a href="/partner/desktop"><img src="/img/logo.png"></a>
       </div>
       <!--收缩状态的LOGO-->
       <div class="logo-icon text-center">
-        <a href="/"><img src="/img/logo_icon.png"></a>
+        <a href="/partner/desktop"><img src="/img/logo_icon.png"></a>
       </div>
       <div class="menu">
         <ul class="list">
           <li>
-            <a class="head"><i class="fa fa-desktop navIco"></i><span>商户首页</span></a>
+            <a class="head" href="/partner/desktop"><i class="fa fa-desktop navIco"></i><span>商户首页</span></a>
           </li>
-          <li>
+          <li class="nav-hover">
             <a class="head"><i class="fa fa-shopping-cart navIco"></i><span>交易管理</span><i class="z-switch"></i></a>
             <ul class="sub">
-              <li><a href=""><i class="u-dot"></i>订单列表</a></li>
-              <li><a href=""><i class="u-dot"></i>提款列表</a></li>
+              <li><a href="/order/list"><i class="u-dot"></i>订单列表</a></li>
+              <li><a href="/withdraw/list"><i class="u-dot"></i>提款列表</a></li>
             </ul>
           </li>
         </ul>

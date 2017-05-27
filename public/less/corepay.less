@@ -4,7 +4,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,label,p{ margin:0; padding:0;}
 body{background: @color-bg;font-size: @font-size-base;font-family: @font-family;min-width: @g-body-w}
 ul,li{list-style: none;}
-
+img{display: block}
 /*基础 type*/
 @import "type.less";
 /*布局 grid*/
@@ -56,6 +56,10 @@ ul,li{list-style: none;}
       &.f-item-verCode{
         >.f-input{
           width: 130px;
+          margin-left: 9px;
+          &.error+.error{
+            right: 90px+24px;
+          }
         }
         >.f-verCode{
           width: 90px;
@@ -68,7 +72,7 @@ ul,li{list-style: none;}
         }
         >.f-verCode-tip{
           position: absolute;
-          bottom: -20px;
+          bottom: -18px;
           right: 0;
           font-size: 12px;
           cursor: pointer;
@@ -111,6 +115,7 @@ ul,li{list-style: none;}
     &-icon{
       display: none;
       .fixed(0,auto,auto,0);
+      width:@s-menu-w;
       background:@color-primary;
     }
   }
@@ -322,3 +327,101 @@ ul,li{list-style: none;}
   }
 }
 
+//导航伸缩
+.s-left-side{
+  .g-menu{
+    width: @s-menu-w;
+    overflow: visible !important;
+    >.logo{
+      display: none;
+    }
+    >.logo-icon{
+      display: block;
+    }
+    >.menu>.list{
+      margin: 0;
+      >li{
+        border-radius: 0;
+        margin-top: 0;
+        .relative();
+        >.head{
+          padding: 12px;
+          border-radius: 0;
+          display: block;
+          >.navIco{
+            font-size: 18px;
+            width: 18px;
+            left:50%;
+            margin-left: -9px;
+            margin-top: -9px;
+            position: inherit;
+            text-align: center;
+          }
+          >span{
+            display: none;
+            background: @color-primary;
+            .absolute(0,auto,auto,@s-menu-w);
+            padding: 12px;
+            min-width: 150px;
+            text-align: left;
+            margin-left: 0;
+            box-sizing: border-box;
+            &::after{
+              right: 100%;
+              top: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              border-color: rgba(0, 0, 0, 0);
+              border-right-color: #3475cf;
+              border-width: 6px;
+              margin-top: -6px;
+            }
+          }
+          >.z-switch{display: none}
+
+        }
+        >.sub{
+          display: none;
+        }
+        &.nav-hover{
+          >.head{
+            background: @color-white;
+            >.navIco{
+              color: @color-yellow;
+            }
+            >span{
+              display: block;
+            }
+          }
+          >.sub{
+            display: block;
+            .absolute(43px,auto,auto,53px);
+            margin: 0;
+            min-width: 149px;
+            background: @color-menu-li;
+            a{
+              padding: 12px;
+            }
+            .u-dot{
+              display: none;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .g-main{
+    margin-left: @s-menu-w;
+    >.top{
+      left: @s-menu-w;
+      >.list{
+        margin-right: @s-menu-w;
+      }
+    }
+  }
+}

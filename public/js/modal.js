@@ -18,7 +18,7 @@
                     onOkBut: function() {return true;},
                     onCancelBut: function() {},
                     onLoad: function() {},
-                    onClose: function() {}
+                    onClose: function() {},
                 };
                 _options = $.extend(_defaults, params);
 
@@ -71,7 +71,7 @@
                     setTimeout(function() {
                         elemObj.addClass('open');
                         elemContObj.css({
-                            marginTop: parseInt(elemContObj.css('marginTop')) - 20 + 'px'
+                            marginTop: parseInt(elemContObj.css('marginTop')) + 'px'
                         });
                     }, animTime);
 
@@ -114,6 +114,7 @@
             hide : function() {
                 dialogModalClose();
             }
+
         };
 
         function dialogModalClose() {
