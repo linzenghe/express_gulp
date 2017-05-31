@@ -3,9 +3,9 @@
  */
 require.config({
     paths: {
-        "jquery": "/lib/jquery/dist/jquery.min",
-        "modal":"/js/modal",       //弹框
-        "validate":"/lib/jquery-validation/dist/jquery.validate.min"   //验证
+        "jquery": "/js/lib/jquery/dist/jquery.min",
+        "modal":"/js/plugin/modal",       //弹框
+        "validate":"/js/lib/jquery-validation/dist/jquery.validate.min"   //验证
     },
     shim:{
         "modal":{

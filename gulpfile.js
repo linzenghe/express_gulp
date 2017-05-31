@@ -28,7 +28,7 @@ var del = require('del');
 
 // 删除文件
 gulp.task('clean', function(cb) {
-    del(['dist/css/*', 'dist/js/*', 'dist/img/*','dist/views/*'], cb)
+    del(['dist/css/*', 'dist/js/controller/*','dist/js/plugin/*','dist/js/*.js','dist/img/*','dist/views/*','dist/*.ico'], cb)
 });
 
 // 复制ejs
@@ -36,6 +36,12 @@ gulp.task('ejs', function() {
   return gulp.src('views/**/*.ejs')
       // .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist/views/'));
+});
+
+//复制ico
+gulp.task('ico', function() {
+    return gulp.src('views/*.ico')
+        .pipe(gulp.dest('dist/'));
 });
 
 // 压缩less
@@ -48,9 +54,6 @@ gulp.task('less', function () {
       // .pipe(minify())
       .pipe(gulp.dest('dist/css/'));
 });
-
-
-
 
 // 压缩js
 gulp.task('js', function () {
@@ -99,7 +102,7 @@ gulp.task('nodemon', function (cb) {
   });
 }); 
 
-gulp.task('build',['clean','less','ejs','js','img'],function () {
+gulp.task('build',['clean','less','ejs','js','img','ico'],function () {
     
 });
 
