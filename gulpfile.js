@@ -40,7 +40,7 @@ gulp.task('ejs', function() {
 
 //复制ico
 gulp.task('ico', function() {
-    return gulp.src('views/*.ico')
+    return gulp.src('public/*.ico')
         .pipe(gulp.dest('dist/'));
 });
 
